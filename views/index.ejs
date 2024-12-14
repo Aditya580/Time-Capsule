@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Capsule</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="m-0 font-[Poppins] bg-[#010824] text-[#eee] text-[15px] min-h-screen bg-[repeating-linear-gradient(to_right,_transparent_0_49px,_#eee1_49px_50px),repeating-linear-gradient(to_bottom,_transparent_0_49px,_#eee1_49px_50px)] relative">
+    <div class="fixed w-[480px] h-[400px] bg-gradient-to-r from-[#15f809] to-[#27bbec] top-[-200px] left-1/2 transform -translate-x-1/2 blur-[250px] rounded-full z-[-1]"></div>
     <!-- Header Section -->
-    <header class="bg-green-500 p-4">
+    <header class="fixed w-full bg-gray-900 p-4">
         <nav class="flex justify-between items-center">
             <div class="text-white text-2xl font-bold">Time Capsule</div>
             <ul class="flex space-x-4">
@@ -20,41 +20,32 @@
                 <li><a href="#features" class="text-white hover:underline">Features</a></li>
                 <li><a href="#testimonials" class="text-white hover:underline">Testimonials</a></li>
             </ul>
-            <a href="/login" class="bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600 transition duration-300">Login</a>
+            <a href="#cta" class="bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600 transition duration-300">Get Started</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-gray-100 p-8 flex flex-col md:flex-row items-center">
-        <div class="md:w-1/2 mb-8 md:mb-0">
-            <h1 class="text-4xl font-bold mb-4">Capture Your Precious Memories</h1>
-            <p class="mb-4">Store your most valuable moments and relive them forever with our time capsule platform.</p>
-            <a href="#cta" class="bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600 transition duration-300">Start Your Journey</a>
-        </div>
-        <div class="md:w-1/2">
-            <img src="hero-image.jpg" alt="Time Capsule Hero Image" class="w-full">
-        </div>
-        <div class="cloader">
-          <div class="clface">
-            <div class="clsface">
-              <div id="h2" class="hand"></div>
+    <section class="home py-20 flex items-center">
+        <div class="content md:w-1/2">
+            <div class="name text-5xl font-bold">
+                Welcome to <span>Time Capsule</span>
             </div>
-            <div class="top"></div>
-            <div class="bottom"></div>
-            <div class="left"></div>
-            <div class="right"></div>
-            <div id="sub" class="pin"></div>
-            <div id="h1" class="hand"></div>
-            <div id="main" class="pin"></div>
-          </div>
+            <div class="des mt-4 text-[#8ee306] border-l-[.7em] border-[#d4f326] pl-8">
+                Store your most valuable moments and relive them forever with our time capsule platform.
+            </div>
+            <a href="#cta" class="bg-orange-500 text-white py-3 px-8 rounded-full hover:bg-orange-600 transition duration-300 inline-block mt-8">Start Your Journey</a>
         </div>
-        
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="p-8 bg-white text-center">
-        <h2 class="text-3xl font-bold mb-4">About Us</h2>
-        <p>Time Capsule allows you to preserve your most cherished memories and access them at any point in the future.</p>
+        <div class="avatar md:w-1/2 flex justify-center">
+            <div class="card w-[250px] shadow-[0_10px_150px_#01ff1f] hover:shadow-[0_10px_150px_#01ff99] transition">
+                <img src="./mypic.png" alt="Time Capsule" class="w-full h-[50vh] object-cover object-top">
+                <div class="info bg-gradient-to-r from-[#7BE728] via-[#7F40AC] to-[#7BE728] text-white grid grid-cols-2 text-center gap-4 p-4 text-lg font-bold">
+                    <div>Secure</div>
+                    <div>Accessible</div>
+                    <div>Memorable</div>
+                    <div>Timeless</div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Features Section -->
@@ -76,47 +67,6 @@
         </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="p-8 bg-white">
-        <h2 class="text-3xl font-bold text-center mb-8">How It Works</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-                <h3 class="text-2xl font-bold mb-2">1. Create</h3>
-                <p>Sign up and start your time capsule journey.</p>
-            </div>
-            <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-                <h3 class="text-2xl font-bold mb-2">2. Store</h3>
-                <p>Upload your memories, stories, and moments.</p>
-            </div>
-            <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-                <h3 class="text-2xl font-bold mb-2">3. Relive</h3>
-                <p>Revisit your time capsule whenever you want.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="p-8 bg-gray-100">
-        <h2 class="text-3xl font-bold text-center mb-8">What Our Users Say</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <p class="italic mb-4">“Time Capsule made it so easy to store and revisit my fondest memories.”</p>
-                <h4 class="text-xl font-bold">- Jane Doe</h4>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <p class="italic mb-4">“I never knew I needed this until I experienced it!”</p>
-                <h4 class="text-xl font-bold">- John Smith</h4>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call-to-Action Section -->
-    <section id="cta" class="p-8 bg-green-500 text-center text-white">
-        <h2 class="text-3xl font-bold mb-4">Start Your Time Capsule Today</h2>
-        <p>Don't wait to preserve your memories. Start now and relive them forever.</p>
-        <a href="#" class="bg-white text-green-500 py-2 px-4 rounded hover:bg-gray-200 transition duration-300">Get Started</a>
-    </section>
-
     <!-- Footer Section -->
     <footer class="bg-gray-900 text-white p-4">
         <div class="flex flex-col md:flex-row justify-between items-center">
@@ -132,4 +82,3 @@
 </body>
 
 </html>
-
