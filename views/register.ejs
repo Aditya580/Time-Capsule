@@ -7,38 +7,77 @@
   <title>Create Account</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Hides both horizontal and vertical scrollbars for webkit-based browsers (Chrome, Safari, etc.) */
+    html::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hides both horizontal and vertical scrollbars for Firefox */
+    html {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    /* Background pattern for page */
+    body {
+      background-color: #010824; /* Matching background color */
+      background-image: repeating-linear-gradient(to right, transparent 0 49px, #eee1 49px 50px),
+        repeating-linear-gradient(to bottom, transparent 0 49px, #eee1 49px 50px);
+    }
+
+    /* Hiding the Scrollbar for the body */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Fixed gradient circle */
+    .gradient-circle {
+      position: fixed;
+      width: 480px;
+      height: 400px;
+      background: linear-gradient(to right, #15f809, #27bbec);
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      filter: blur(250px);
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+  </style>
 </head>
 
-<body class="flex items-center justify-center min-h-screen bg-gray-900">
+<body>
+
+  <!-- Background Gradient Circle -->
+  <div class="gradient-circle"></div>
+
   <div class="flex w-full max-w-4xl rounded-lg shadow-lg bg-white overflow-hidden">
-
+    
     <!-- Left Side -->
-
-    <div class="w-1/2 bg-gradient-to-r from-blue-100 to-blue-300 flex items-center justify-center p-10">
+    <div class="w-1/2 bg-gradient-to-r flex items-center justify-center p-10">
       <div class="text-center">
-        <h2 class="text-2xl font-bold text-gray-700 mb-4">Welcome to Our Service</h2>
-        <img src="https://via.placeholder.com/250" alt="Illustration" class="mx-auto">
+        
+        <img src="public/videos/image-2.png" alt="img" class="mx-auto">
       </div>
     </div>
+    
 
     <!-- Right Side -->
     <div class="w-1/2 p-10 flex flex-col justify-center">
       <h1 class="text-3xl font-extrabold mb-4 text-gray-800">Create Account</h1>
 
-      <!-- Google Sign Up Button -->
-      <!-- <div class="flex space-x-4 mb-4">
-        <button class="w-full bg-white text-gray-600 border border-gray-200 py-4 rounded hover:bg-gray-100 transition duration-300">
-          <img src="https://img.icons8.com/color/20/000000/google-logo.png" class="inline-block mr-3" />
-          Sign up with Google
-        </button>
-      </div>
-
-      <div class="text-center text-gray-400 mb-4">OR</div> -->
-
       <!-- Registration Form -->
       <form action="/users/register" method="post">
         <div class="mb-4">
-          <label for="fullname"  class="block text-sm font-medium text-gray-700">USER NAME</label>
+          <label for="fullname" class="block text-sm font-medium text-gray-700">USER NAME</label>
           <input type="text" id="fullname" name="username" class="w-full border-gray-300 rounded-md shadow-sm p-2 focus:ring focus:ring-blue-300" required>
         </div>
         <div class="mb-4">
@@ -58,6 +97,7 @@
       </form>
     </div>
   </div>
+
 </body>
 
 </html>

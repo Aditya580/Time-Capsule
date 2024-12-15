@@ -5,11 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Hides both horizontal and vertical scrollbars for webkit-based browsers (Chrome, Safari, etc.) */
+    html::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hides both horizontal and vertical scrollbars for Firefox */
+    html {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    /* Background pattern for page */
+    body {
+      background-color: #010824; /* Matching background color */
+      background-image: repeating-linear-gradient(to right, transparent 0 49px, #eee1 49px 50px),
+        repeating-linear-gradient(to bottom, transparent 0 49px, #eee1 49px 50px);
+    }
+
+    /* Fixed gradient circle */
+    .gradient-circle {
+      position: fixed;
+      width: 480px;
+      height: 400px;
+      background: linear-gradient(to right, #15f809, #27bbec);
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      filter: blur(250px);
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+  </style>
 </head>
 
-<body class="bg-gradient-to-r from-blue-900 to-blue-700 min-h-screen flex items-center justify-center">
+<body class="flex items-center justify-center min-h-screen">
+
+  <!-- Background Gradient Circle -->
+  <div class="gradient-circle"></div>
+
   <div class="flex w-full max-w-4xl rounded-lg shadow-lg bg-white overflow-hidden">
-    
+
     <!-- Left Side: Welcome Section -->
     <div class="w-1/2 bg-gradient-to-r from-blue-900 to-blue-700 flex items-center justify-center text-white p-10">
       <h2 class="text-3xl font-extrabold">Welcome Back!</h2>
@@ -29,7 +67,7 @@
 
         <!-- Password -->
         <div class="mb-6">
-          <label for="password" class="block text-sm font-medium   text-gray-700 " >Password</label>
+          <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
           <input type="password" placeholder="******" id="password" name="password" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
         </div>
 
@@ -55,5 +93,7 @@
       </div>
     </div>
   </div>
+
 </body>
+
 </html>
