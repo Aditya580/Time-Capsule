@@ -25,7 +25,12 @@ router.get("/profile", (req, res, next) => {
 });
 
 router.get("/letter", (req, res, next) => {
+
+
+
+  
   res.render("letter");
 });
+
 
 module.exports = router;

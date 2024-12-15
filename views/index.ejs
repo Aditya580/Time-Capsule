@@ -30,26 +30,43 @@
                 width: 100%;
             }
         }
-
-        .typewriter {
-            display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-            width: 0;
-            border-right: 4px solid rgba(255, 255, 255, 0.75); /* Cursor effect */
-            animation: typewriter 4s steps(30) 0s 1 normal both, blink 0.75s step-end infinite; /* Set delay to 0s */
-        }
-
         @keyframes blink {
             50% {
                 border-color: transparent;
             }
         }
+
+        .typewriter {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 4px solid rgba(255, 255, 255, 0.75); /* Cursor effect */
+            animation: typewriter 4s steps(30) 0s 1 normal both; /* Set delay to 0s */
+            position: relative;
+        }
+      
+
+        .typewriter::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: rgba(255, 255, 255, 0.75); /* Cursor color */
+    animation: blink 0.75s step-end infinite;
+    animation-delay: 4s; /* Match typewriter animation duration */
+    visibility: hidden; /* Initially hidden */
+}
+
+
+
+    
     </style>
 </head>
 
 <body class="m-0 font-[Poppins] bg-[#010824] text-[#eee] text-[15px] min-h-screen bg-[repeating-linear-gradient(to_right,_transparent_0_49px,_#eee1_49px_50px),repeating-linear-gradient(to_bottom,_transparent_0_49px,_#eee1_49px_50px)] relative overflow-auto">
-
+<div class="object-contain w-full h-full bg-center"style=" background-image: url('https://i.pinimg.com/1200x/6f/0f/bc/6f0fbc8e2d053ea42591328f7fd1af2e.jpg') ">
     <div class="fixed w-[480px] h-[400px] bg-gradient-to-r from-[#15f809] to-[#27bbec] top-[-200px] left-1/2 transform -translate-x-1/2 blur-[250px] rounded-full z-[-1]"></div>
 
     <!-- Header Section  -->
@@ -59,14 +76,15 @@
     <section class="home relative h-screen flex items-center justify-center overflow-auto">
         <!-- Overlay Content -->
         <div class="content text-center text-white max-w-full">
-            <h1 class="text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center">
+          <div style="width: 54vw; margin-left:27vw;">
+            <h1 class="text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center " style="font-size: 4vw; line-height: 5vw;">
                 <span class="typewriter">
-                    Welcome to <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#7BE728] via-[#7F40AC] to-[#7BE728]">Time Capsule</span>
+                Welcome to <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#7BE728] via-[#7F40AC] to-[#7BE728]">Time Capsule</span>
                 </span>
             </h1>
-
+          </div >
             <div style="width: 100vw; padding-left: 6vw;">
-                <p class="mt-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-lg sm:max-w-xl md:max-w-2xl mx-auto text-center">
+                <p class="mt-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-lg sm:max-w-xl md:max-w-2xl mx-auto text-center" >
                     Store your most valuable moments and relive them forever with our time capsule platform.
                 </p>
             </div>
@@ -76,6 +94,7 @@
             </a>
         </div>
     </section>
+  </div>
 
     <!-- Features Section -->
     <section id="features" class="p-8 bg-gray-800">
@@ -92,7 +111,7 @@
                 <p>Your memories are safe and secure with end-to-end encryption.</p>
             </div>
             <div class="bg-black p-6 rounded-lg shadow-md text-center">
-                <img src="https://i.pinimg.com/1200x/59/6d/26/596d2699275bc5dba6c498133549db7d.jpg" alt="Timely Reminders" class="mx-auto mb-4 rounded-full">
+                <img src="https://i.pinimg.com/1200x/70/eb/0b/70eb0b53eb57c91db403928c5d02a19a.jpg" alt="Timely Reminders" class="mx-auto mb-4 rounded-full">
                 <h3 class="text-2xl font-bold mb-2">🔔 Timely Reminders</h3>
                 <p>Get notifications to revisit your precious moments.</p>
             </div>

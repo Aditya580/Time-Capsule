@@ -31,7 +31,19 @@ router.post(
     successRedirect: "/",
     failureRedirect: "/login",
   }),
-  (req, res, next) => {}
+  (req, res, next) => {
+
+
+  }
 );
 
+router.post('/letter',(req,res,next)=>{
+
+
+  res.redirect('/');
+})
+
+
 module.exports = router;
+
+
