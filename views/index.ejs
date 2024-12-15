@@ -30,19 +30,63 @@
             </video> -->
 
 
-            <!-- <video autoplay loop muted src="/public/videos/video-1.mp4"></video> -->
+            <!-- <video autoplay loop muted src="https://in.pinterest.com/pin/593138213443522636/"></video> -->
 
             <!-- Overlay Content -->
             <div class="content text-center text-white">
-                <h1 class="text-5xl font-bold">
-                    Welcome to <span
-                        class="bg-clip-text text-transparent bg-gradient-to-r from-[#7BE728] via-[#7F40AC] to-[#7BE728]">Time
-                        Capsule</span>
+
+
+              <!DOCTYPE html>
+              <html lang="en">
+              <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Typewriter Effect</title>
+                <script src="https://cdn.tailwindcss.com"></script>
+                <style>
+                  @keyframes typewriter {
+                    0% {
+                      width: 0;
+                    }
+                    100% {
+                      width: 100%;
+                    }
+                  }
+              
+                  .typewriter {
+                    display: inline-block;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    width: 0;
+                    border-right: 4px solid rgba(255, 255, 255, 0.75); /* Cursor effect */
+                    animation: typewriter 4s steps(30) 0s 1 normal both, blink 0.75s step-end infinite; /* Set delay to 0s */
+                  }
+              
+                  @keyframes blink {
+                    50% {
+                      border-color: transparent;
+                    }
+                  }
+                </style>
+              </head>
+              <body class="bg-gray-800 text-white flex items-center justify-center min-h-screen px-4">
+              
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center">
+                  <span class="typewriter">
+                    Welcome to <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#7BE728] via-[#7F40AC] to-[#7BE728]">Time Capsule</span>
+                  </span>
                 </h1>
+              
+              </body>
+              </html>
+              
+
+
+
                 <p class="mt-4 text-xl max-w-lg mx-auto">
                     Store your most valuable moments and relive them forever with our time capsule platform.
                 </p>
-                <a href="#cta"
+                <a href="/profile"
                     class="bg-blue-500 text-white py-3 px-8 rounded-full hover:bg-green-600 transition duration-300 inline-block mt-8">
                     Start Your Journey
                 </a>
