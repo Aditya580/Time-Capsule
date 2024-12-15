@@ -4,6 +4,7 @@ const passport = require("passport");
 const User = require("../models/userSchema");
 const Letter = require("../models/letter");
 const LocalStrategy = require("passport-local");
+const { isLoggedIn } = require("../middleware/aunth");
 
 passport.use(new LocalStrategy(User.authenticate()));
 
@@ -18,6 +19,7 @@ router.post("/register", async (req, res, next) => {
     const unchanged = { username, email };
     const encrypt = password;
 
+    console.log(req.body);
     await User.register(unchanged, encrypt);
     res.redirect("/login");
   } catch (err) {
@@ -31,19 +33,30 @@ router.post(
     successRedirect: "/",
     failureRedirect: "/login",
   }),
-  (req, res, next) => {
-
-
-  }
+  (req, res, next) => {}
 );
 
-router.post('/letter',(req,res,next)=>{
+router.post("/letter", async (req, res) => {
+  try {
+    const newLetter = new Letter({
+      title: req.body.title,
+      letter: req.body.letter,
+      date: req.body.date,
+      createdBy: req.user._id, 
+    });
 
+    await newLetter.save();
 
-  res.redirect('/');
-})
+    req.user.letter.push(newLetter._id);
+    await req.user.save();
+
+    console.log("New letter created and linked to user:", newLetter);
+    res.redirect("/profile");
+  } catch (err) {
+    console.log("Error creating letter:", err);
+    res.status(400).send("Error creating letter: " + err.message);
+  }
+});
 
 
 module.exports = router;
-
-

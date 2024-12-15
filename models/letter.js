@@ -1,20 +1,23 @@
 const mongoose = require("mongoose");
-const plm = require("passport-local-mongoose");
+// const plm = require("passport-local-mongoose");
 const letterSchema = new mongoose.Schema({
-  tittle: String,
+  title: String,
   letter: String,
-  date: Number,
-  time: Number,
+  date: Date,
 
-  createdBy: [
+  createdBy: 
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "user",
+      ref: "User",
     },
-  ],
+  
 });
 
-letterSchema.plugin(plm);
-const Letter = mongoose.model("letter", letterSchema);
+// letterSchema.plugin(plm);
+const Letter = mongoose.model("Letter", letterSchema);
 
 module.exports = Letter;
+
+
+
+
