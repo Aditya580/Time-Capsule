@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r from-blue-900 to-blue-700 min-h-screen flex items-center justify-center">
+  <div class="flex w-full max-w-4xl rounded-lg shadow-lg bg-white overflow-hidden">
+    
+    <!-- Left Side: Welcome Section -->
+    <div class="w-1/2 bg-gradient-to-r from-blue-900 to-blue-700 flex items-center justify-center text-white p-10">
+      <h2 class="text-3xl font-extrabold">Welcome Back!</h2>
+    </div>
+
+    <!-- Right Side: Login Section -->
+    <div class="w-1/2 p-10 flex flex-col justify-center">
+      <h1 class="text-2xl font-bold text-gray-800 mb-4">Login</h1>
+      <p class="text-sm text-gray-600 mb-6">Welcome back! Please login to your account.</p>
+
+      <form action="/users/login" method="POST">
+        <!-- Username -->
+        <div class="mb-4">
+          <label for="username" class="block text-sm font-medium text-gray-700">User Name</label>
+          <input type="text" id="username" name="username" placeholder="username@gmail.com" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-6">
+          <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+          <input type="password" id="password" name="password" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        </div>
+
+        <!-- Remember Me & Forgot Password -->
+        <div class="flex justify-between items-center mb-6">
+          <label class="flex items-center text-sm text-gray-600">
+            <input type="checkbox" class="mr-2"> Remember Me
+          </label>
+          <a href="#" class="text-sm text-blue-600 hover:text-blue-800">Forgot Password?</a>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          Login
+        </button>
+      </form>
+
+      <!-- Signup -->
+      <div class="text-center mt-6">
+        <p class="text-sm text-gray-600">
+          New User? <a href="/register" class="text-blue-600 font-semibold hover:text-blue-800">Signup</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

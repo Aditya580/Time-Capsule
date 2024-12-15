@@ -9,76 +9,77 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
-<body class="m-0 font-[Poppins] bg-[#010824] text-[#eee] text-[15px] min-h-screen bg-[repeating-linear-gradient(to_right,_transparent_0_49px,_#eee1_49px_50px),repeating-linear-gradient(to_bottom,_transparent_0_49px,_#eee1_49px_50px)] relative">
-    <div class="fixed w-[480px] h-[400px] bg-gradient-to-r from-[#15f809] to-[#27bbec] top-[-200px] left-1/2 transform -translate-x-1/2 blur-[250px] rounded-full z-[-1]"></div>
-    <!-- Header Section -->
-    <header class="fixed w-full bg-gray-900 p-4">
-        <nav class="flex justify-between items-center">
-            <div class="text-white text-2xl font-bold">Time Capsule</div>
-            <ul class="flex space-x-4">
-                <li><a href="#about" class="text-white hover:underline">About</a></li>
-                <li><a href="#features" class="text-white hover:underline">Features</a></li>
-                <li><a href="#testimonials" class="text-white hover:underline">Testimonials</a></li>
-            </ul>
-            <a href="#cta" class="bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600 transition duration-300">Get Started</a>
-        </nav>
-    </header>
+<body
+    class="m-0 font-[Poppins] bg-[#010824] text-[#eee] text-[15px] min-h-screen bg-[repeating-linear-gradient(to_right,_transparent_0_49px,_#eee1_49px_50px),repeating-linear-gradient(to_bottom,_transparent_0_49px,_#eee1_49px_50px)] relative">
+    <div
+        class="fixed w-[480px] h-[400px] bg-gradient-to-r from-[#15f809] to-[#27bbec] top-[-200px] left-1/2 transform -translate-x-1/2 blur-[250px] rounded-full z-[-1] ">
+    </div>
 
-    <!-- Hero Section -->
-    <section class="home py-20 flex items-center">
-        <div class="content md:w-1/2">
-            <div class="name text-5xl font-bold">
-                Welcome to <span>Time Capsule</span>
+    <!-- Header Section -->
+
+    <%- include('partials/nav') %>
+
+
+        <!-- Hero Section with Video Background -->
+        <section class="home relative h-screen flex items-center justify-center">
+
+            <!-- 🎥 Video Background -->
+            <!-- <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+                <source src="/public/videos/video-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> -->
+
+
+            <!-- <video autoplay loop muted src="/public/videos/video-1.mp4"></video> -->
+
+            <!-- Overlay Content -->
+            <div class="content text-center text-white">
+                <h1 class="text-5xl font-bold">
+                    Welcome to <span
+                        class="bg-clip-text text-transparent bg-gradient-to-r from-[#7BE728] via-[#7F40AC] to-[#7BE728]">Time
+                        Capsule</span>
+                </h1>
+                <p class="mt-4 text-xl max-w-lg mx-auto">
+                    Store your most valuable moments and relive them forever with our time capsule platform.
+                </p>
+                <a href="#cta"
+                    class="bg-blue-500 text-white py-3 px-8 rounded-full hover:bg-green-600 transition duration-300 inline-block mt-8">
+                    Start Your Journey
+                </a>
             </div>
-            <div class="des mt-4 text-[#8ee306] border-l-[.7em] border-[#d4f326] pl-8">
-                Store your most valuable moments and relive them forever with our time capsule platform.
-            </div>
-            <a href="#cta" class="bg-orange-500 text-white py-3 px-8 rounded-full hover:bg-orange-600 transition duration-300 inline-block mt-8">Start Your Journey</a>
-        </div>
-        <div class="avatar md:w-1/2 flex justify-center">
-            <div class="card w-[250px] shadow-[0_10px_150px_#01ff1f] hover:shadow-[0_10px_150px_#01ff99] transition">
-                <img src="./mypic.png" alt="Time Capsule" class="w-full h-[50vh] object-cover object-top">
-                <div class="info bg-gradient-to-r from-[#7BE728] via-[#7F40AC] to-[#7BE728] text-white grid grid-cols-2 text-center gap-4 p-4 text-lg font-bold">
-                    <div>Secure</div>
-                    <div>Accessible</div>
-                    <div>Memorable</div>
-                    <div>Timeless</div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="p-8 bg-gray-800">
+            <h2 class="text-3xl font-bold text-center mb-8">Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-black p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-2xl font-bold mb-2">🗂️ Easy Organization</h3>
+                    <p>Keep all your memories neatly organized and easy to access.</p>
+                </div>
+                <div class="bg-black p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-2xl font-bold mb-2">📦 Secure Storage</h3>
+                    <p>Your memories are safe and secure with end-to-end encryption.</p>
+                </div>
+                <div class="bg-black p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-2xl font-bold mb-2">🔔 Timely Reminders</h3>
+                    <p>Get notifications to revisit your precious moments.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Features Section -->
-    <section id="features" class="p-8 bg-gray-100">
-        <h2 class="text-3xl font-bold text-center mb-8">Features</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                <h3 class="text-2xl font-bold mb-2">🗂️ Easy Organization</h3>
-                <p>Keep all your memories neatly organized and easy to access.</p>
+        <!-- Footer Section -->
+        <footer class="bg-gray-900 text-white p-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-lg font-bold">Time Capsule</div>
+                <ul class="flex space-x-4">
+                    <li><a href="#about" class="hover:underline">About</a></li>
+                    <li><a href="#features" class="hover:underline">Features</a></li>
+                    <li><a href="#testimonials" class="hover:underline">Testimonials</a></li>
+                </ul>
+                <p>&copy; 2024 Time Capsule. All rights reserved.</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                <h3 class="text-2xl font-bold mb-2">📦 Secure Storage</h3>
-                <p>Your memories are safe and secure with end-to-end encryption.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                <h3 class="text-2xl font-bold mb-2">🔔 Timely Reminders</h3>
-                <p>Get notifications to revisit your precious moments.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="bg-gray-900 text-white p-4">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-            <div class="text-lg font-bold">Time Capsule</div>
-            <ul class="flex space-x-4">
-                <li><a href="#about" class="hover:underline">About</a></li>
-                <li><a href="#features" class="hover:underline">Features</a></li>
-                <li><a href="#testimonials" class="hover:underline">Testimonials</a></li>
-            </ul>
-            <p>&copy; 2024 Time Capsule. All rights reserved.</p>
-        </div>
-    </footer>
+        </footer>
 </body>
 
 </html>
