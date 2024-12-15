@@ -56,6 +56,9 @@ router.post("/letter", async (req, res) => {
     console.log("Error creating letter:", err);
     res.status(400).send("Error creating letter: " + err.message);
   }
+
+
+
 });
 
 
