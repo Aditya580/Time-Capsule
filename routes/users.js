@@ -13,9 +13,9 @@ router.get("/", function (req, res, next) {
 
 router.post("/register", async (req, res, next) => {
   try {
-    const { username, passward, email } = req.body;
+    const { username, password, email } = req.body;
     const unchanged = { username, email };
-    const encrypt = passward;
+    const encrypt = password;
 
     await User.register(unchanged, encrypt);
     res.redirect("/login");
@@ -27,7 +27,7 @@ router.post("/register", async (req, res, next) => {
 router.post(
   "/login",
   passport.authenticate("local", {
-    successRedirect: "/users/index",
+    successRedirect: "/",
     failureRedirect: "/login",
   }),
   (req, res, next) => {}
