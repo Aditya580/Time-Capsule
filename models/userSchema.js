@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
   letter: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Letter",
+      ref: "Letter", // Reference the Letter model
     },
   ],
 });
@@ -17,6 +17,3 @@ const userSchema = new mongoose.Schema({
 userSchema.plugin(plm);
 const User = mongoose.model("User", userSchema);
 module.exports = User;
-
-
-

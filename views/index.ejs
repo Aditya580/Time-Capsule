@@ -9,18 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
-        /* Hides both horizontal and vertical scrollbars for webkit-based browsers (Chrome, Safari, etc.) */
         html::-webkit-scrollbar {
             display: none;
         }
 
-        /* Hides both horizontal and vertical scrollbars for Firefox */
         html {
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* Internet Explorer 10+ */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
         }
 
-        /* Typewriter Effect */
         @keyframes typewriter {
             0% {
                 width: 0;
@@ -30,6 +27,7 @@
                 width: 100%;
             }
         }
+
         @keyframes blink {
             50% {
                 border-color: transparent;
@@ -40,65 +38,52 @@
             display: inline-block;
             overflow: hidden;
             white-space: nowrap;
-            border-right: 4px solid rgba(255, 255, 255, 0.75); /* Cursor effect */
-            animation: typewriter 4s steps(30) 0s 1 normal both; /* Set delay to 0s */
+            border-right: 4px solid rgba(255, 255, 255, 0.75);
+            animation: typewriter 3s steps(30) 0s 1 normal both;
             position: relative;
         }
-      
 
         .typewriter::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 4px;
-    background-color: rgba(255, 255, 255, 0.75); /* Cursor color */
-    animation: blink 0.75s step-end infinite;
-    animation-delay: 4s; /* Match typewriter animation duration */
-    visibility: hidden; /* Initially hidden */
-}
-
-
-
-    
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: rgba(255, 255, 255, 0.75);
+            animation: blink 0.75s step-end infinite;
+        }
     </style>
 </head>
 
-<body class="m-0 font-[Poppins] bg-[#010824] text-[#eee] text-[15px] min-h-screen bg-[repeating-linear-gradient(to_right,_transparent_0_49px,_#eee1_49px_50px),repeating-linear-gradient(to_bottom,_transparent_0_49px,_#eee1_49px_50px)] relative overflow-auto">
-<div class="object-contain w-full h-full bg-center"style=" background-image: url('https://i.pinimg.com/1200x/31/75/71/31757163e03ad0533b17bfc0a1bdc42d.jpg');  background-repeat: no-repeat;background-attachment: fixed ;background-size:100% 100% ; ">
-    <div class="fixed w-[480px] h-[400px] bg-gradient-to-r from-[#15f809] to-[#27bbec] top-[-200px] left-1/2 transform -translate-x-1/2 blur-[250px] rounded-full z-[-1]"></div>
+<body class="font-[Poppins] bg-[#010824] text-[#eee] text-base bg-[repeating-linear-gradient(to_right,_transparent_0_49px,_#eee1_49px_50px),repeating-linear-gradient(to_bottom,_transparent_0_49px,_#eee1_49px_50px)] min-h-screen">
+    <div class="relative bg-cover bg-fixed bg-center" style="background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6f9b913b-c48a-43ab-a9aa-26d4355d1d80/dgn8bow-5655690a-6487-4a32-96ad-95dbd69d6027.png/v1/fill/w_1280,h_549,q_80,strp/space_art_224___4k_ultrawide_wallpaper_background_by_ixul_dgn8bow-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTQ5IiwicGF0aCI6IlwvZlwvNmY5YjkxM2ItYzQ4YS00M2FiLWE5YWEtMjZkNDM1NWQxZDgwXC9kZ244Ym93LTU2NTU2OTBhLTY0ODctNGEzMi05NmFkLTk1ZGJkNjlkNjAyNy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.i2tYpp_US3VtVQHY4VH9Gtrc0WjDpMJ0XbmgZisvH9E');">
+        <div class="fixed w-full h-full top-0 left-0 bg-gradient-to-r from-[#15f809] to-[#27bbec] opacity-50 blur-[200px] z-[-1]"></div>
 
-    <!-- Header Section  -->
-    <%- include('partials/nav') %>
+        <!-- Navigation -->
+        <%- include('partials/nav') %>
 
-    <!-- Hero Section with Video Background -->
-    <section class="home relative h-screen flex items-center justify-center overflow-auto">
-        <!-- Overlay Content -->
-        <div class="content text-center text-white max-w-full">
-          <div style="width: 54vw; margin-left:27vw;">
-            <h1 class="text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center " style="font-size: 4vw; line-height: 5vw;">
-                <span class="typewriter text-black">
-                Welcome to <span class="bg-clip-text text-transparent " style="font-weight: 600; color: white;">Time Capsule</span>
-                </span>
-            </h1>
-          </div >
-            <div style="width: 100vw; padding-left: 6vw;">
-                <p class="mt-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-lg sm:max-w-xl md:max-w-2xl mx-auto text-center text-black" style="font-weight: 600;" >
+        <!-- Hero Section -->
+        <section class="relative flex items-center justify-center h-screen px-4">
+            <div class="text-center max-w-lg mx-auto" style="position: relative; top: -6vw;">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
+                    <span class="typewriter text-white">
+                        Welcome to <span class="text-4xl font-bold bg-gradient-to-r from-green-400 via-purple-500 to-green-400 bg-clip-text text-transparent">Time Capsule</span>
+                    </span>
+                </h1>
+                <p class="mt-4 text-sm sm:text-base md:text-lg text-white font-medium">
                     Store your most valuable moments and relive them forever with our time capsule platform.
                 </p>
+                <a href="/letter" class="inline-block mt-6 px-4 py-2 bg-purple-900 text-white text-sm sm:text-base font-bold rounded-full hover:bg-blue-900 transition">
+                    Start Your Journey
+                </a>
             </div>
-            <a href="/letter"
-                class="bg-blue-500 text-white py-3 px-8 rounded-full hover:bg-green-600 transition duration-300 inline-block mt-8">
-                Start Your Journey
-            </a>
-        </div>
-    </section>
-  </div>
+        </section>
+    </div>
 
     <!-- Features Section -->
     <section id="features" class="p-8 bg-gray-800">
-        <h2 class="text-3xl font-bold text-center mb-8">Features</h2>
+        <h2 class="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-green-400 via-purple-500 to-green-400 bg-clip-text text-transparent" >Features</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div class="bg-black p-6 rounded-lg shadow-md text-center">
                 <img src="https://i.pinimg.com/1200x/70/eb/0b/70eb0b53eb57c91db403928c5d02a19a.jpg" alt="Easy Organization" class="mx-auto mb-4 rounded-full">
@@ -186,6 +171,11 @@
             </div>
         </div>
     </footer>
+
+    
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/12/14/09/20241214091608-KELVPUEQ.js"></script>
+    
 
 </body>
 

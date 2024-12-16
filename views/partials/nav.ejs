@@ -1,32 +1,28 @@
-
-
-
-<header class="flex items-center justify-between sticky top-0 bg-gray-800 text-white  py-3 px-4" style="z-index: 9999; background: transparent;">
+<header class="flex items-center justify-between sticky top-0 bg-transparent text-white py-3 px-4 z-50" style="position: relative; top:-2vw">
     <nav class="flex items-center justify-between w-full">
-        <div class="flex">
-            <!-- Logo/Title -->
-            <a href="https://im.ge/i/zPcdof"><img src="https://i.im.ge/2024/12/15/zPcdof.Time-Capsule-Logo-removebg-preview.png" alt="Time Capsule Logo removebg preview" style="width: 4vw; position: relative; left: -1vw; top:-1vw" /></a>
-            <div class="text-xl font-semibold" style="display: flex; align-items: center; position: relative; left:-4.5vw; top: 1vw;">Time Trace</div>
+        <!-- Logo and Title -->
+        <div class="flex flex-col items-center">
+            <a href="/">
+                <img src="https://i.im.ge/2024/12/15/zPcdof.Time-Capsule-Logo-removebg-preview.png" 
+                     alt="Time Capsule Logo" 
+                     class="w-12 h-auto sm:w-14 md:w-16 lg:w-20">
+            </a>
+            <div class="text-base sm:text-lg md:text-xl font-semibold mt-2 " style="position: relative; top: -1vw; ">Time Trace</div>
         </div>
-        
-       
-        <!-- Navigation Links (Hidden on small screens, displayed on medium and larger) -->
-        <!-- <ul  class="hidden md:flex space-x-4">
-            <li><a href="#about" class="text-xs sm:text-sm hover:text-blue-400 transition-colors">About</a></li>
-            <li><a href="#features" class="text-xs sm:text-sm hover:text-blue-400 transition-colors">Features</a></li>
-            <li><a href="#testimonials" class="text-xs sm:text-sm hover:text-blue-400 transition-colors">Testimonials</a></li>
-        </ul> -->
 
-        <!-- Register and Login Links (Hidden on small screens, displayed on medium and larger) -->
+        <!-- Register and Login Links -->
         <div class="hidden md:flex space-x-3">
-
-            <a href="/profile" style=""><img style="background: transparent; border: none; background: none; width:3vw; height: auto;  position: relative; left:-1vw" src="https://png.pngtree.com/png-vector/20190223/ourmid/pngtree-profile-line-black-icon-png-image_691065.jpg" ></a>
-            <a href="/" class="bg-blue-600 hover:bg-blue-500 text-white px-3 py-1 text-xs sm:text-sm md:text-base rounded-md transition-colors">LOG OUT</a>
-            <a href="/login" class="border-2 border-white hover:bg-white hover:text-blue-600 text-white px-3 py-1 text-xs sm:text-sm md:text-base rounded-md transition-colors">Log In</a>
+            <a href="/profile">
+                <img src="https://png.pngtree.com/png-vector/20190223/ourmid/pngtree-profile-line-black-icon-png-image_691065.jpg" 
+                     alt="Profile Icon" 
+                     class="w-8 h-8 rounded-full">
+            </a>
+            <a href="/" class="bg-blue-600 hover:bg-blue-500 text-white px-3 py-1 rounded-md text-sm transition-colors">Log Out</a>
+            <a href="/login" class="border-2 border-white hover:bg-white hover:text-blue-600 text-white px-3 py-1 rounded-md text-sm transition-colors">Log In</a>
         </div>
 
-        <!-- Hamburger Menu for Mobile (Visible on small screens) -->
-        <div class="md:hidden flex items-center" style="z-index: 999;">
+        <!-- Hamburger Menu for Mobile -->
+        <div class="md:hidden flex items-center">
             <button id="menuButton" class="text-white focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -35,17 +31,16 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu (Hidden by default, shown when hamburger is clicked) -->
-    <div id="mobileMenu" class="md:hidden hidden bg-gray-800 text-white w-full p-4 space-y-4" style="z-index: 998;">
-        <ul>
-            <li><a href="#about" class="block text-xs sm:text-sm hover:text-blue-400 transition-colors">About</a></li>
-            <li><a href="#features" class="block text-xs sm:text-sm hover:text-blue-400 transition-colors">Features</a></li>
-            <li><a href="#testimonials" class="block text-xs sm:text-sm hover:text-blue-400 transition-colors">Testimonials</a></li>
-        </ul>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-gray-800 text-white w-full p-4 space-y-4">
         <div class="flex flex-col space-y-3">
-            <!-- Adjusted padding and font size for mobile -->
-            <a href="/register" class="bg-blue-600 hover:bg-blue-500 text-white px-3 py-1 text-xs sm:text-sm md:text-base rounded-md transition-colors">Register</a>
-            <a href="/login" class="border-2 border-white hover:bg-white hover:text-blue-600 text-white px-3 py-1 text-xs sm:text-sm md:text-base rounded-md transition-colors">Log In</a>
+            <a href="/profile">
+                <img src="https://png.pngtree.com/png-vector/20190223/ourmid/pngtree-profile-line-black-icon-png-image_691065.jpg" 
+                     alt="Profile Icon" 
+                     class="w-10 h-10 mx-auto rounded-full">
+            </a>
+            <a href="/" class="bg-blue-600 hover:bg-blue-500 text-white px-3 py-2 rounded-md text-sm text-center transition-colors">Log Out</a>
+            <a href="/login" class="border-2 border-white hover:bg-white hover:text-blue-600 text-white px-3 py-2 rounded-md text-sm text-center transition-colors">Log In</a>
         </div>
     </div>
 </header>

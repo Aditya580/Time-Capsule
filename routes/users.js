@@ -36,30 +36,44 @@ router.post(
   (req, res, next) => {}
 );
 
-router.post("/letter", async (req, res) => {
-  try {
-    const newLetter = new Letter({
-      title: req.body.title,
-      letter: req.body.letter,
-      date: req.body.date,
-      createdBy: req.user._id, 
-    });
-
-    await newLetter.save();
-
-    req.user.letter.push(newLetter._id);
-    await req.user.save();
-
-    console.log("New letter created and linked to user:", newLetter);
-    res.redirect("/profile");
-  } catch (err) {
-    console.log("Error creating letter:", err);
-    res.status(400).send("Error creating letter: " + err.message);
+router.post("/schedule-email", async (req, res) => {
+  if (!req.isAuthenticated()) {
+    return res.redirect("/login");
   }
 
+  const { subject, message, scheduleDate } = req.body;
 
+  if (!subject || !message || !scheduleDate) {
+    return res.status(400).send("All fields are required.");
+  }
 
+  try {
+    // Get the logged-in user's ID
+    const userId = req.user._id;
+
+    // Create a new Letter document
+    const newLetter = new Letter({
+      subject,
+      message,
+      scheduleDate,
+      owner: userId, // Associate the letter with the user
+    });
+
+    // Save the letter to the Letter collection
+    await newLetter.save();
+
+    // Add the letter to the user's letter array
+    const user = await User.findById(userId);
+    user.letter.push(newLetter._id);
+    await user.save();
+
+    res.redirect("/profile"); // Redirect to a dashboard or homepage
+  } catch (err) {
+    console.error("Error scheduling email:", err);
+    res.status(500).send("An error occurred while scheduling the email.");
+  }
 });
+
 
 
 module.exports = router;

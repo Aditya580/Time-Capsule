@@ -25,7 +25,7 @@ router.get("/forget", (req, res, next) => {
   res.render("forget");
 });
 
-router.get("/profile" ,async(req, res, next) => {
+router.get("/profile",isLoggedIn ,async(req, res, next) => {
 
   let user = await User.findById(req.user?._id).populate("letter")
 

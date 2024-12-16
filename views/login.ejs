@@ -1,31 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Hides both horizontal and vertical scrollbars for webkit-based browsers (Chrome, Safari, etc.) */
+    /* Hides both horizontal and vertical scrollbars */
     html::-webkit-scrollbar {
       display: none;
     }
 
-    /* Hides both horizontal and vertical scrollbars for Firefox */
     html {
       scrollbar-width: none;
       -ms-overflow-style: none;
-    }
-
-    /* Background pattern for page */
-    body {
-      /* background-color: #010824; Matching background color */
-      /* background-image: repeating-linear-gradient(to right, transparent 0 49px, #eee1 49px 50px), */
-        /* repeating-linear-gradient(to bottom, transparent 0 49px, #eee1 49px 50px); */
-        background-image: url(https://i.pinimg.com/1200x/94/ac/d8/94acd82615c05312b39886aa412a887e.jpg);
-        /* background-repeat: no-repeat; */
-        /* background-attachment: fixed ;
-        background-size: 100% 110% ; */
     }
 
     /* Fixed gradient circle */
@@ -41,24 +30,23 @@
       border-radius: 50%;
       z-index: -1;
     }
-
   </style>
 </head>
 
-<body class="flex items-center justify-center min-h-screen">
+<body class="flex items-center justify-center min-h-screen bg-gray-100" style="background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6f9b913b-c48a-43ab-a9aa-26d4355d1d80/dgoubck-de7ee165-b080-42f5-acc1-4ced9a1c0e04.png/v1/fill/w_1280,h_549,q_80,strp/space_art_269___4k_ultrawide_wallpaper_background_by_ixul_dgoubck-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTQ5IiwicGF0aCI6IlwvZlwvNmY5YjkxM2ItYzQ4YS00M2FiLWE5YWEtMjZkNDM1NWQxZDgwXC9kZ291YmNrLWRlN2VlMTY1LWIwODAtNDJmNS1hY2MxLTRjZWQ5YTFjMGUwNC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.rQ5i2VpRJYQijH31bETfukyd2IBPFfWi-8xqp-p-VTE) ; background-repeat: no-repeat; background-size: 100% 100%;">
 
   <!-- Background Gradient Circle -->
-  <div class="gradient-circle"></div>
+  <div class="gradient-circle" ></div>
 
-  <div class="flex w-full max-w-4xl rounded-lg shadow-lg bg-white overflow-hidden">
-
+  <div class="flex flex-col lg:flex-row w-full max-w-4xl rounded-lg shadow-lg bg-white overflow-hidden mx-4" style="background-image: url();">
     <!-- Left Side: Welcome Section -->
-    <div class="w-1/2 bg-gradient-to-r from-blue-900 to-blue-700 flex items-center justify-center text-white p-10" style="background-image: url(https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAxL3Jhd3BpeGVsX29mZmljZV80MF8zZF9pbGx1c3RyYXRpb25fb2ZfYXN0cm9uYXV0X19pbl9zcGFjZV9iYWNrZ181ZDgzOTIwZi1hNjVhLTQ0ZGYtYmFjNy0wZTQxYzg0ODMzZGNfMi5qcGc.jpg);     background-repeat: no-repeat; background-size: 100% 140%;">
-      <h2 class="text-3xl font-extrabold text-black">Welcome Back!</h2>
+    <div class="w-full lg:w-1/2 bg-gradient-to-r from-blue-900 to-blue-700 flex items-center justify-center text-white p-10 bg-cover bg-center"
+      style="background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAxL3Jhd3BpeGVsX29mZmljZV80MF8zZF9pbGx1c3RyYXRpb25fb2ZfYXN0cm9uYXV0X19pbl9zcGFjZV9iYWNrZ181ZDgzOTIwZi1hNjVhLTQ0ZGYtYmFjNy0wZTQxYzg0ODMzZGNfMi5qcGc.jpg');">
+      <h2 class="text-3xl font-extrabold text-center lg:text-left">Welcome Back!</h2>
     </div>
 
     <!-- Right Side: Login Section -->
-    <div class="w-1/2 p-10 flex flex-col justify-center">
+    <div class="w-full lg:w-1/2 p-8 md:p-10 flex flex-col justify-center">
       <h1 class="text-2xl font-bold text-gray-800 mb-4">Login</h1>
       <p class="text-sm text-gray-600 mb-6">Welcome back! Please login to your account.</p>
 
@@ -76,7 +64,7 @@
         </div>
 
         <!-- Remember Me & Forgot Password -->
-        <div class="flex justify-between items-center mb-6">
+        <div class="flex flex-wrap justify-between items-center mb-6">
           <label class="flex items-center text-sm text-gray-600">
             <input type="checkbox" class="mr-2"> Remember Me
           </label>

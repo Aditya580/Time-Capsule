@@ -15,22 +15,22 @@
         <!-- New Letter Form -->
          <h2 class="text-2xl text-center  font-bold">Write to Your Future itself</h2>
         <div class="w-full p-4 bg-gradient-to-r from-blue-900 to-yellow text-transparent bg-gradient-to-r from-[#7BE728] via-[#7F40AC] to-[#7BE728] m-auto pt-10 rounded-lg">
-            <form action="/users/letter" method="post">
+            <form action="/users/schedule-email" method="post">
                 <div class="mb-4 text-left">
-                    <label for="title" class="block text-white font-semibold">Title</label>
-                    <input type="text" id="title" name="title" placeholder="Enter title" class="w-full mt-2 p-2 border rounded-lg" style="color: black;">
+                    <label for="title" class="block text-white font-semibold">Tite</label>
+                    <input type="text" id="title" name="subject" placeholder="Enter title" class="w-full mt-2 p-2 border rounded-lg" style="color: black;">
                 </div>
 
                 <div class="mb-4 flex space-x-4 text-left">
                     <div class="mb-4 text-left">
                         <label for="dateTime" class="block text-white font-semibold">Date & Time</label>
-                        <input type="datetime-local" id="dateTime" name="dateTime" class="w-full mt-2 p-2 border rounded-lg" style="color: black;">
+                        <input type="datetime-local" id="dateTime" name="scheduleDate" class="w-full mt-2 p-2 border rounded-lg" style="color: black;">
                     </div>
                 </div>
 
                 <div class="mb-4 text-left">
                     <label for="letter" class="block text-white font-semibold">Write Your Letter</label>
-                    <textarea id="letter" name="letter" placeholder="Write your letter here..." rows="6" class="w-full mt-2 p-2 border rounded-lg" style="color: black;"></textarea>
+                    <textarea id="letter" name="message" placeholder="Write your letter here..." rows="6" class="w-full mt-2 p-2 border rounded-lg" style="color: black;"></textarea>
                 </div>
 
                 
